@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+@font-face {
+    font-family: 'fonte android';
+    src: url(../fonte/idroid.otf);
+}
+
+:root{
+    --cor01: #005c56;
+    --cor02: #00c75a5b;
+    --cor03: #09DB00;
+    --cor04: #9BF20C;
+    --cor05: #EBDD13;
+
+    --cor06:#00d660;
+    --cor07:#024b00;
+    --cor08:#0acf6348;
+    --cor09:#08ac02bd;
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Fredericka the Great', cursive;
+    --fonte-android:'fonte android';
+}
+
+body{
+    background-color: var(--cor02);
+}
+
+header{
+    background-image: linear-gradient( var(--cor06), var(--cor07));
+    padding: 10px;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.459);
+}
+
+header h1{
+    font-family: var(--fonte-padrao);
+    font-size: 35px;
+    text-align: center;
+}
+
+header p{
+    font-family: var(--fonte-padrao);
+    font-size: 18px;
+    text-align: center;
+    padding: 2px;
+}
+
+header nav{
+    padding: 5px;
+    margin-left: 15px;
+}
+
+header nav a {
+    font-family: var(--fonte-padrao);
+    font-size: 14px;
+    margin: 9px;
+    text-decoration: none;
+    background-color: var(--cor08);
+    color: black;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 3px 5px 3px 0px #00000034;
+    transition: 0.5s;
+}
+
+header nav a:hover{
+    background-color: var(--cor09);
+    color: white;
+}
+
+main{
+    border-radius: 0px 0px 8px 8px;
+    padding: 20px;
+    margin: auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.219);
+}
+
+.titulo{
+    font-family: var(--fonte-android);
+    font-size: 20px;
+    padding: 10px 10px 5px 10px;
+    color: var(--cor01);
+}
+
+h1.titulo{
+    font-size: 30px;
+}
+
+.paragrafo{
+    font-family: var(--fonte-padrao);
+    text-indent: 15px;
+    margin: 10px;
+    text-align: justify;
+    padding: 10px;
+}
+
+span, a{
+    color: var(--cor06);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+picture > img{/*nao estava conseguindo centralizar a imagem porque eu nao estava atacando o filho em si.*//*e para a imagem acompanhar o tamanho do site basta colocar um width de 100%*/
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+#imagem{/*nessa imagem e um pouco diferente, se voce colocar width 50%  vai funcionar, mas a imagem vai ficar embassada, mas se voce colocar max-width vais ser muito melhor*/
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+}
+
+#video{/*nao dei conta de deixar responsivo*/ /*nao sei porque mas a primeira vez que eu fui centralizar nao de certo mas alguma coisa aconteceu e tava la centralizado*/ /*gambiarra - primeiro voce vai envelopar o iframe em um id(ou class) depois voce vai criar a div(com o id/class) depois voce vai colocar essas propriedades na div video: padding: 15px 30px; background-color: rgba(0, 172, 0, 0.603); margin: 20px; depois, depois voce pega cria outra div e ataca o iframe, no div video voce coloca a tag positio"relative" e na video > iframe voce coloca position"absolute", na div video voce vai ter que dar uma padding-bottom de 50%(mas isso e relativo), voltando no iframe voce vai colocar abaixo de position absolute top:5% left:5% width:90% height:90%, quando voce der play no video ele vai ficar com umas barras pretas do lado do video, mas tem como mudar isso mudando a porcentagem da div video */
+    padding: 15px 30px;
+    background-color: rgba(0, 172, 0, 0.603);
+    margin: 20px;
+    position: relative;
+    padding-bottom: 58.5%;
+}
+
+#video > iframe{
+    position: absolute;
+    top:5%;
+    left:5%; 
+    width:90%; 
+    height:90%;
+
+}
+
+article{
+    max-width: 800px;
+    margin: auto;
+    background-color: var(--cor02);
+    font-family: var(--fonte-destaque);
+    border-radius: 8px;
+}
+
+article h2{
+
+    border-radius: 8px 8px 0px 0px;
+    font-family: var(--fonte-padrao);
+    padding: 7px;
+    background-color: var(--cor01);
+}
+
+article ul{
+    list-style-type: none;
+    columns: 2;
+    padding: 10px;
+    margin: 10px;
+    border-style: none;
+}
+
+footer p{
+    background-color: rgba(0, 128, 0, 0.582);
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer a{
+    font-weight: normal;
+    color: white;
+}
